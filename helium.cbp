@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="helium" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option output="libhelium" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+					<Add directory="src" />
+				</Compiler>
+			</Target>
+			<Target title="release">
+				<Option output="libhelium" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add directory="src" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="src" />
+			<Add directory="src/engine" />
+		</Compiler>
+		<Unit filename="src/engine/defines.h" />
+		<Unit filename="src/engine/game_app.cpp" />
+		<Unit filename="src/engine/game_app.h" />
+		<Unit filename="src/engine/globals.h" />
+		<Unit filename="src/engine/pragmas.h" />
+		<Unit filename="src/engine/units.h" />
+		<Unit filename="src/entity/component.cpp" />
+		<Unit filename="src/entity/component.h" />
+		<Unit filename="src/entity/component/base_animation.cpp" />
+		<Unit filename="src/entity/component/base_animation.h" />
+		<Unit filename="src/entity/component/physics2d.cpp" />
+		<Unit filename="src/entity/component/physics2d.h" />
+		<Unit filename="src/entity/component/transform.cpp" />
+		<Unit filename="src/entity/component/transform.h" />
+		<Unit filename="src/entity/entity.cpp" />
+		<Unit filename="src/entity/entity.h" />
+		<Unit filename="src/entity/message.cpp" />
+		<Unit filename="src/entity/message.h" />
+		<Unit filename="src/graphics/base_renderer.cpp" />
+		<Unit filename="src/graphics/base_renderer.h" />
+		<Unit filename="src/math/math.h" />
+		<Unit filename="src/math/quaternion.cpp" />
+		<Unit filename="src/math/quaternion.h" />
+		<Unit filename="src/math/vector.cpp" />
+		<Unit filename="src/math/vector.h" />
+		<Unit filename="src/system/event_loop.cpp" />
+		<Unit filename="src/system/event_loop.h" />
+		<Unit filename="src/system/sys_timer.cpp" />
+		<Unit filename="src/system/sys_timer.h" />
+		<Unit filename="src/utility/ansi_console.cpp" />
+		<Unit filename="src/utility/ansi_console.h" />
+		<Unit filename="src/utility/container.cpp" />
+		<Unit filename="src/utility/container.h" />
+		<Unit filename="src/utility/debug.cpp" />
+		<Unit filename="src/utility/debug.h" />
+		<Unit filename="src/utility/game_timer.cpp" />
+		<Unit filename="src/utility/game_timer.h" />
+		<Extensions>
+			<code_completion>
+				<search_path add="src/" />
+			</code_completion>
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
