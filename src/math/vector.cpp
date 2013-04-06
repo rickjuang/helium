@@ -24,9 +24,9 @@ void Vector3::Rotate(const Vector3& unit_axis, float radians)
 
 void Vector3::Rotate(const Quaternion& quat)
 {
-#ifdef _DEBUG
+#if 1
 	//store compoments of each operand in local variables so they can be optimized by compiler
-	const float vx = m_data[X], vy = m_data[Y], vz = m_data[Z];//, vw = m_data[W];
+	const float vx = m_data[X], vy = m_data[Y], vz = m_data[Z];
 	const float qx =   quat[X], qy =   quat[Y], qz =   quat[Z],   qw = quat[W];
 
 	//http://physicsforgames.blogspot.com/2010/03/quaternion-tricks.html

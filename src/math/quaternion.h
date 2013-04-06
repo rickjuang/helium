@@ -398,34 +398,7 @@ namespace Math
 
 	inline Vector3 Quaternion::operator*(const Vector3 &vec) const
 	{
-#ifdef _DEBUG
-		//store compoments of each operand in local variables so they can be optimized by compiler
-		const float vx =    vec[X], vy =    vec[Y], vz =    vec[Z];
-		const float qx = m_data[X], qy = m_data[Y], qz = m_data[Z], qw = m_data[W];
-
-		//http://physicsforgames.blogspot.com/2010/03/quaternion-tricks.html
-		float x1 = qy * vz - qz * vy;
-		float y1 = qz * vx - qx * vz;
-		float z1 = qx * vy - qy * vx;
-
-		float x2 = qw * x1 + qy * z1 - qz * y1;
-		float y2 = qw * y1 + qz * x1 - qx * z1;
-		float z2 = qw * z1 + qx * y1 - qy * x1;
-#else
-		//http://physicsforgames.blogspot.com/2010/03/m_dataernion-tricks.html
-		float x1 = m_data[Y] * vec[Z] - m_data[Z] * vec[Y];
-		float y1 = m_data[Z] * vec[X] - m_data[X] * vec[Z];
-		float z1 = m_data[X] * vec[Y] - m_data[Y] * vec[X];
-
-		float x2 = m_data[W] * x1 + m_data[Y] * z1 - m_data[Z] * y1;
-		float y2 = m_data[W] * y1 + m_data[Z] * x1 - m_data[X] * z1;
-		float z2 = m_data[W] * z1 + m_data[X] * y1 - m_data[Y] * x1;
-#endif
-		return Vector3(
-			vec[X] + (x2 + x2),
-			vec[Y] + (y2 + y2),
-			vec[Z] + (z2 + z2)
-		);
+		return vec.GetRotated(*this);
 	}
 
 	inline Quaternion Quaternion::operator*(float scaler) const

@@ -82,7 +82,7 @@ namespace Math
 	private:
 		union
 		{
-			float	m_data[Z+1];
+			float	m_data[Z + 1];
 		//	struct	{ float x, y, z; };
 		//	__m128	m_mm_data;
 		};
