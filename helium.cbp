@@ -30,6 +30,7 @@
 				<Option createDefFile="1" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++0x" />
 					<Add option="-Wall" />
 					<Add directory="src" />
 				</Compiler>
