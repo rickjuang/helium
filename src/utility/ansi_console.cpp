@@ -23,7 +23,8 @@ ANSIConsole::ANSIConsole(void)
 
 void ANSIConsole::Clear(void)
 {
-	printf("\E[H\E[2J\n");
+	printf("\E[H\E[2J");
+	fflush(stdout); // eliminate the need of \n at the end
 }
 
 void ANSIConsole::Write(int x, int y, const char* str, bool clip)
@@ -66,7 +67,8 @@ void ANSIConsole::Write(int x, int y, const char* str, bool clip)
 
 	if (*head != '\0')
 	{
-		printf("\E[%d;%dH%s\E[%d;1H\n", row, col, head, m_height - 1);
+		printf("\E[%d;%dH%s\E[%d;1H", row, col, head, m_height - 1);
+		fflush(stdout); // eliminate the need of \n at the end
 	}
 }
 
