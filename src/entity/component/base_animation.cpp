@@ -35,7 +35,7 @@ BaseAnimation::~BaseAnimation(void)
 	if (s_manager)
 	{
 		s_manager->UnregisterComponent(this);
-		if (!s_manager->HasComponentsRegistered())
+		if (!s_manager->HasComponents())
 		{
 			delete s_manager;
 			s_manager = NULL;

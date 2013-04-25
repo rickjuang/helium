@@ -77,7 +77,7 @@ namespace Entity
 		void						RegisterComponent(Component* com);
 		void						UnregisterComponent(Component* com);
 		bool						IsComponentRegistered(Component* com);
-		bool						HasComponentsRegistered(void);
+		bool						HasComponents(void);
 		void						SetUpdateFrequency(float hertz, Utility::Timer::TimeStepType time_step_type);
 		void						SetUpdateTimeLimit(MSec time);
 

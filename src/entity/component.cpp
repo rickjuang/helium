@@ -108,7 +108,7 @@ bool ComponentManager::IsComponentRegistered(Component* com)
 	return (STL::find(m_components.begin(), m_components.end(), com) != m_components.end());
 }
 
-bool ComponentManager::HasComponentsRegistered(void)
+bool ComponentManager::HasComponents(void)
 {
 	return !m_components.empty();
 }
