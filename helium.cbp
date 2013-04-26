@@ -17,6 +17,7 @@
 					<Add option="-std=c++0x" />
 					<Add option="-Wall" />
 					<Add option="-g" />
+					<Add option="-fno-rtti" />
 					<Add option="-D_DEBUG" />
 					<Add directory="src" />
 				</Compiler>
@@ -32,6 +33,7 @@
 					<Add option="-O2" />
 					<Add option="-std=c++0x" />
 					<Add option="-Wall" />
+					<Add option="-fno-rtti" />
 					<Add directory="src" />
 				</Compiler>
 				<Linker>
