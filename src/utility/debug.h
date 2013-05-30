@@ -15,8 +15,8 @@
 	void Dbg_Assert(int expression, const char* format, ...);
 	void Dbg_PrintF(const char* format, ...);
 #else
-	#define Dbg_PrintF(expression)
-	#define Dbg_Assert(expression)
+	#define Dbg_Assert(...)
+	#define Dbg_PrintF(...)
 #endif
 
 #endif // __DEBUG_H__
